@@ -1,7 +1,7 @@
 package com.example.authsample.common.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**

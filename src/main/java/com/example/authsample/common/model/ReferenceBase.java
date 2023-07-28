@@ -1,9 +1,9 @@
 package com.example.authsample.common.model;
 
-import jakarta.persistence.*;
 import org.apache.tomcat.util.security.MD5Encoder;
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;

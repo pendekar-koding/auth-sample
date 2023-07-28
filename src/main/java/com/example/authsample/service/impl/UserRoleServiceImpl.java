@@ -82,9 +82,11 @@ public class UserRoleServiceImpl implements UserRoleService {
 
     private UserRole toEntity(UserRoleWrapper wrapper) {
         UserRole model = new UserRole();
-        Optional<UserRole> optional = userRoleRepository.findById(wrapper.getId());
-        if (optional.isPresent()) {
-            model = optional.get();
+        if (wrapper.getValue() != null) {
+            Optional<UserRole> optional = userRoleRepository.findByDeletedIsFalseAndValue(wrapper.getValue());
+            if (optional.isPresent()) {
+                model = optional.get();
+            }
         }
 
         model.setDeleted(wrapper.getDeleted());

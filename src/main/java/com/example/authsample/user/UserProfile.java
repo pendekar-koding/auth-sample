@@ -1,7 +1,8 @@
 package com.example.authsample.user;
 
 import com.example.authsample.common.model.ReferenceBase;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_profile")
